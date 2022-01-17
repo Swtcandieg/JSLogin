@@ -6,12 +6,11 @@
   --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
 
   --font-family: "Poppins", system-ui;
+}
 
-  --bg-gradient: linear-gradient(
-    to bottom,
-    hsl(var(--hue), 95%, 99%),
-    hsl(var(--hue), 95%, 84%)
-  );
+h1 {
+  text-align: center;
+  color: lightseagreen;
 }
 
 * {
@@ -52,8 +51,8 @@ body {
 
 .overlay {
   width: 100%;
-  max-width: 540px;
-  max-height: 640px;
+  max-width: 420px;
+  max-height: 550px;
   padding: 8rem 6rem;
   display: flex;
   align-items: center;
