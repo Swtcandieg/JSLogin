@@ -1,15 +1,10 @@
 :root {
-  --dark-color: hsl(var(--hue), 100%, 9%);
-  --light-color: hsl(var(--hue), 95%, 98%);
-  --base: hsl(var(--hue), 95%, 50%);
-  --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
-  --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
-
   --font-family: "Poppins", system-ui;
 }
 
 h1 {
   text-align: center;
+
   color: lightseagreen;
 }
 
@@ -33,20 +28,6 @@ body {
   font-family: var(--font-family);
   color: var(--dark-color);
   background: linear-gradient(lightsalmon, lightseagreen);
-}
-
-.orb-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.strong {
-  font-weight: 600;
 }
 
 .overlay {
@@ -142,62 +123,35 @@ a {
 }
 
 /* Not too many browser support this yet but it's good to add! */
-@media (prefers-contrast: high) {
-  .orb-canvas {
-    display: none;
-  }
+.overlay {
+  padding: 4rem;
+  height: auto;
 }
 
-@media only screen and (max-width: 1140px) {
-  .overlay {
-    padding: 8rem 4rem;
-  }
+.overlay__title {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-@media only screen and (max-width: 840px) {
-  body {
-    padding: 1.5rem;
-  }
-
-  .overlay {
-    padding: 4rem;
-    height: auto;
-  }
-
-  .overlay__title {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .overlay__description {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    margin-bottom: 2.5rem;
-  }
+.overlay__description {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-@media only screen and (max-width: 600px) {
-  .overlay {
-    padding: 1.5rem;
-  }
-
-  .overlay__btns {
-    flex-wrap: wrap;
-  }
-
-  .overlay__btn {
-    width: 100%;
-    font-size: 0.75rem;
-    margin-right: 0;
-  }
-
-  .overlay__btn:first-child {
-    margin-bottom: 1rem;
-  }
+.overlay__btns {
+  flex-wrap: wrap;
 }
-@use postcss-preset-env {
-  stage: 0;
+
+.overlay__btn {
+  width: 100%;
+  font-size: 0.75rem;
+  margin-right: 0;
+}
+
+.overlay__btn:first-child {
+  margin-bottom: 1rem;
 }
 
 /* config.css */
